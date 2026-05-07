@@ -19,8 +19,8 @@ html, body {
 }
 
 #navbarNavAltMarkup a{
-    font-size: 1.5vw;
-    font-weight: 200;
+    font-size: 1rem;
+    font-weight: 300;
     color: white;
 }
 
@@ -57,39 +57,151 @@ html, body {
 }
 
 
+/* ===============================
+                About Section
+    ====================================== */
+#about {
+    /* Per your professor's advice, consider a more neutral color later! */
+    background-color: #FF5500; 
+}
+
+#about .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#about .custom-heading {
+    max-width: 80%;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #000;
+    font-size: 4vw !important;
+}
+
+#about .discover-p{
+    max-width: 60%;
+    line-height: 25px;
+    font-size: 1.5vw;
+    font-weight: 200;
+}
+
+@media (max-width: 1920px) {
+    #about .custom-heading {
+        max-width: 80%;
+        line-height: 1.2;
+        color: #000;
+        font-size: 3.5vw;
+    }
+}
+
+#about button {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    /* Switched to rem/px for better scaling than vw */
+    font-size: 1rem; 
+    font-weight: 300;
+    padding: 10px 20px 10px 70px;
+    border-radius: 50px 10px 10px 50px;
+    white-space: nowrap; /* Prevents text inside button from wrapping */
+    transition: transform 0.2s ease;
+}
+
+#about button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#about .dev-img {
+    border: 6px solid black;
+    border-radius: 35px;
+    width: 650px;
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+    
+#about .about-me {
+    font-size: 6vw;
+    font-weight: 200;
+    display: block;
+}
+
+#about p {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
 
 
 /* ===============================
                 Projects Section
     ====================================== */
 #projects{
-    background-color: #FF5500;
+    background-color: #e4f4ff;
 }
 
 #projects h1{
-    font-size: 7vw;
+
+    font-size: 5vw;
     color: black;
 }
 
-#projects h4 {
-    border-left: 15px solid black;
-    padding-left: 15px;
+#projects h4 {  
+    text-align: center;
+    border-bottom: 5px solid black;
     margin-top: 15px;
-    font-weight: 700;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+#projects p{
+    text-align: center;
+    padding: 20px 25px;
+    color: #182129;
+    font-size: 100%;
 }
 
 .img-container {
     position: relative;
     overflow: hidden;
     background-color: #000;
-    border-radius: 3vw;
-    border: 2px solid black;
+    border-radius: 5vw;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 5vw;
+    height: 250px; /* fixed height for all cards */
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills the container, crops if needed */
+    object-position: center;
+    display: block;
+}
+
+.img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: #ff550091; */
+    border-radius: 5vw;
+    pointer-events: none;
 }
 
 
 
 
-/* ===============================
+/* =====================================
                 Tools Section
     ====================================== */
 #tools{
@@ -260,7 +372,7 @@ footer h2{
     TABLET STYLES (768px to 991px)
     ====================================== */
 @media (min-width: 768px) and (max-width: 991px) {
-
+    
     #navbar .nav-link {
         font-size: 3vw;
         padding: 10px 6px 20px 6px;
